@@ -1,0 +1,191 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+  }
+  
+  /* Header Styles */
+  
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .imgU {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  .navbar {
+    background-color: #444;
+    padding: 1rem;
+    border-radius: 10px;
+    width: 100%;
+  }
+  
+  .nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .nav-links li {
+    margin: 0 10px;
+  }
+  
+  .nav-links a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .nav-links a:hover {
+    color: #ccc;
+  }
+  
+  .button-container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .whatsapp, .gmail {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin: 5px 0;
+  }
+  
+  .whatsapp:hover, .gmail:hover {
+    background-color: #444;
+  }
+  
+  /* Main Content Styles */
+  
+  .h1 {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 2.5rem; /* Responsive font size */
+  }
+  
+  .div2 {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .img-src {
+    width: 100%;
+    max-width: 600px; /* Limit max width for larger screens */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .type {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 1.5rem; /* Responsive font size */
+  }
+  
+  .items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 50px;
+  }
+  
+  .rtr-span {
+    margin: 20px;
+    text-align: center;
+    flex: 1 1 200px; /* Allow items to grow and shrink */
+  }
+  
+  .img-rest {
+    width: 100%;
+    max-width: 150px; /* Limit max width for larger screens */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .heading-rest {
+    margin-top: 10px;
+    font-size: 1rem; /* Responsive font size */
+  }
+
+  .foot{
+  text-align: center;
+  margin-left: 60px;
+  }
+  .main-foot{
+    background-color: gainsboro;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  /* Media Queries for Responsiveness */
+  
+  @media (max-width: 768px) {
+    .h1, .type {
+      font-size: 2rem; /* Smaller font size for mobile */
+    }
+  
+    .button-container {
+      flex-direction: column; /* Align buttons horizontally on larger screens */
+    }
+  
+    .whatsapp, .gmail {
+      margin: 0 5px; /* Reduce margin between buttons */
+    }
+  
+    .img-src {
+      width: 90%; /* Adjust image width for mobile */
+    }
+    .main-foot{
+      text-align: center;
+    }
+    .foot{
+      margin-right: 70px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .h1, .type {
+      font-size: 1.5rem; /* Further decrease font size for very small screens */
+    }
+  
+    .nav-links {
+      flex-direction: column; /* Stack nav links vertically */
+    }
+  
+    .nav-links li {
+      margin: 5px 0; /* Adjust margin for stacked links */
+    }
+  
+    .img-rest {
+      max-width: 100px; /* Reduce image size for mobile */
+    }
+  }
