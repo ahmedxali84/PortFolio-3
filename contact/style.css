@@ -1,130 +1,231 @@
+/* Reset basic styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-    font-family: sans-serif;
-    background-color: #f9f9f9;
-    margin: 0;
-    padding: 0;
+  font-family: 'Roboto', sans-serif; /* Modern font */
+  background: linear-gradient(to bottom, #000000, #1a1a1a); /* Dark gradient */
+  color: #f5f5f5;
+  line-height: 1.6;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
+/* Header Styles */
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 1rem;
-    text-align: center;
-  }
-  .button-container {
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .head {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .navbar {
-    background-color: #444;
-    padding: 1rem;
-    border-radius: 10px;
-    width: 100%;
-  }
-  
-  .nav-links {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  
-  .nav-links li {
-    margin: 0 10px;
-  }
-  
-  .nav-links a {
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  .nav-links a:hover {
-    color: #ccc;
-  }
-  
-  .button-container {
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .whatsapp, .gmail {
-    background-color: #333;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 10px;
-    margin: 5px 0;
-  }
-  
-  .whatsapp:hover, .gmail:hover {
-    background-color: #444;
-  }
-  
-
-h1 {
-    text-align: center;
-    font-size: 3rem;
-    margin-bottom: 20px;
+  background-color: #111;
+  padding: 3rem 2rem; /* Increased padding for a spacious header */
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  text-shadow: 3px 3px 6px rgba(255, 0, 0, 0.7); /* Enhanced Red text shadow */
+  animation: fadeIn 2s ease-out;
 }
 
-p {
-    line-height: 1.5;
-    margin-bottom: 20px;
+.navbar {
+  background-color: #1a1a1a;
+  padding: 1.2rem;
+  border-radius: 10px;
+  width: 100%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+.nav-links li {
+  margin: 0 20px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.nav-links a {
+  color: #f9d835;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  text-shadow: 1px 1px 2px rgba(255, 0, 0, 0.8);
+}
+
+.nav-links a:hover {
+  background-color: #f9d835;
+  color: #111;
+  text-shadow: 2px 2px 4px rgba(255, 0, 0, 0.9);
+  box-shadow: 0 5px 15px rgba(255, 0, 0, 0.4);
+  transform: scale(1.1);
+}
+
+/* Contact Section */
+.contact-section {
+  text-align: center;
+  margin: 50px 20px;
+  animation: fadeInUp 1s ease-out;
+}
+
+.contact-section h1 {
+  font-size: 3rem;
+  color: #f9d835;
+  margin-bottom: 30px;
+  text-shadow: 3px 3px 6px rgba(255, 0, 0, 0.7);
 }
 
 .contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  max-width: 500px;
+  margin: 0 auto;
+  background: #222;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  transition: background 0.3s ease;
 }
 
-input[type="text"],
-input[type="email"],
-textarea {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+.contact-form input, 
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  background-color: #333;
+  color: #f5f5f5;
+  border: 1px solid #f9d835;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
-button {
-    background-color: #000;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+.contact-form input:focus, 
+.contact-form textarea:focus {
+  background-color: #444;
+  border-color: #f9d835;
+  outline: none;
 }
-.imgU {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    margin-bottom: 10px;
-  }
-  .imgU {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    margin-bottom: 10px;
-  }
+
+.contact-form button {
+  background-color: #f9d835;
+  color: #111;
+  font-weight: bold;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #111;
+  color: #f9d835;
+  transform: scale(1.1);
+}
+
 .social-links {
-    display: flex;
-    gap: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
 }
 
 .social-links a {
-    text-decoration: none;
-    color: #000;
+  color: #f9d835;
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #ff4747;
+  transform: scale(1.1);
+}
+
+/* Buttons (Whatsapp and Gmail) */
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.whatsapp, .gmail {
+  background-color: #25d366; /* WhatsApp green */
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 12px 25px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.whatsapp:hover {
+  background-color: #128c7e; /* Darker green for hover */
+  transform: scale(1.1);
+}
+
+.gmail {
+  background-color: #db4437; /* Gmail red */
+}
+
+.gmail:hover {
+  background-color: #c1351d; /* Darker red for hover */
+  transform: scale(1.1);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .contact-section h1 {
+      font-size: 2.5rem;
+  }
+
+  .contact-form input, 
+  .contact-form textarea {
+      font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-section h1 {
+      font-size: 2rem;
+  }
+
+  .contact-form input, 
+  .contact-form textarea {
+      font-size: 0.9rem;
+  }
+
+  .social-links a {
+      font-size: 1rem;
+  }
 }
