@@ -4,53 +4,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ahmed Ali | PORTFOLIO</title>
+    <title>Ahmed Ali | Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <header>
-        <span class="head">
-            <img src="profile1.jpg" height="150" class="imgU">
-            <div class="navbar">
+        <div class="header-container">
+            <img src="profile1.jpg" class="profile-pic" alt="Profile Picture">
+            <nav class="navbar">
                 <ul class="nav-links">
-                    <li><a href="index.html" target="_blank">Home</a></li>
-                    <li><a href="./contact/index.html"  target="_blank">Contact</a></li>
-                    <li><a href="./Projects/index.html"  target="_blank">Projects</a></li>
-                    <li><a href="./about/index.html"  target="_blank">About</a></li>
-
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="./contact/index.html">Contact</a></li>
+                    <li><a href="./Projects/index.html">Projects</a></li>
+                    <li><a href="./about/index.html">About</a></li>
                 </ul>
-            </span>
-        </div>
-        <div class="button-container">
-            <a href="https://wa.me/03182715442"><button class="whatsapp">Whatsapp</button></a>
-            <a href="mailto:designersweb4@gmail.com"><button class="gmail">Gmail</button></a>
+            </nav>
         </div>
     </header>
-    
-    <h1 class="h1">Hi!!! My Name Is Ahmed Ali</h1>
-    <div class="div2">
-        <img src="web.jpg" class="img-src">
-    </div>
-    <h1 class="type">1) WHICH TYPE OF WEBSITES YOU WANT???</h1>
-    <div class="items">
-        <span class="rtr-span"><img src="restraunts.jpg" class="img-rest"><h3 class="heading-rest">Restraunts</h3></span>
- <span class="rtr-span"><img src="import_export.jpg"class="img-rest"><h3 class="heading-rest">Import & Export</h3></span>
- <span class="rtr-span"><img src="call centre.jpg" class="img-rest"><h3 class="heading-rest">Call Center</h3></span>
- <span class="rtr-span"><img src="shop.jpg" class="img-rest"><h3 class="heading-rest">Shops</h3></span>
-</div>
+<hr>
+    <main>
+        <section class="hero">
+            <h1 class="hero-heading">Hi! I'm Ahmed Ali, a MERN Stack, Python Developer, Data Scientist, Algorithm Developer & C++ and C Programmer</h1>
+            <div class="intro-image-container">
+                <img src="web.jpg" class="intro-image" alt="Intro Image">
+            </div>
+        </section>
 
-<script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
-<script src="https://files.bpcontent.cloud/2024/10/16/21/20241016214625-FXVVCG0T.js"></script>
-   <div class="main-foot">
-<div class="foot">
-         <a href="https://www.instagram.com/ahmed___ali334/"><img src="instagram-logo.png" height="40px" width="50px"></a>
-         <a href="https://github.com/ahmedxali84"><img src="github.png" height="40px" width="50px"></a>
-         <a href="https://www.linkedin.com/in/ahmed-ali-024bb0314/"><img src="linkedin.png" height="40px" width="50px"></a>
-         <a href="https://www.facebook.com/profile.php?id=100010376101852"><img src="facebook.png" height="40px" width="50px"></a>
-    </div>
-</div>
-<script src="app.js"></script>
+        <section class="website-types">
+            <h2>Types of Websites I Build</h2>
+            <div class="website-cards">
+                <div class="card" onmouseover="showText(this)" onmouseout="hideText(this)">
+                    <div class="card-image-wrapper">
+                        <img src="restraunts.jpg" class="card-image" alt="Restaurant">
+                        <div class="card-text">
+                            Elegant websites with menu integrations, booking systems, and more.
+                        </div>
+                    </div>
+                    <h3>Restaurant Websites</h3>
+                </div>
+                <div class="card" onmouseover="showText(this)" onmouseout="hideText(this)">
+                    <div class="card-image-wrapper">
+                        <img src="import_export.jpg" class="card-image" alt="Import & Export">
+                        <div class="card-text">
+                            Professional and secure websites tailored to business needs.
+                        </div>
+                    </div>
+                    <h3>Import & Export Sites</h3>
+                </div>
+                <div class="card" onmouseover="showText(this)" onmouseout="hideText(this)">
+                    <div class="card-image-wrapper">
+                        <img src="shop.jpg" class="card-image" alt="Online Shop">
+                        <div class="card-text">
+                            Build online stores with easy navigation and checkout systems.
+                        </div>
+                    </div>
+                    <h3>E-commerce Websites</h3>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact">
+            <h2>Contact Me</h2>
+            <a href="https://wa.me/03182715442"><button class="btn whatsapp">WhatsApp</button></a>
+            <a href="mailto:designersweb4@gmail.com"><button class="btn gmail">Gmail</button></a>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://www.instagram.com/ahmed___ali334/"><img src="instagram-logo.png" alt="Instagram"></a>
+            <a href="https://github.com/ahmedxali84"><img src="github.png" alt="GitHub"></a>
+            <a href="https://www.linkedin.com/in/ahmed-ali-024bb0314/"><img src="linkedin.png" alt="LinkedIn"></a>
+            <a href="https://www.facebook.com/profile.php?id=100010376101852"><img src="facebook.png" alt="Facebook"></a>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
 </body>
 
 </html>
