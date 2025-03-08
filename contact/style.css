@@ -55,6 +55,7 @@ header {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+  flex-wrap: nowrap; /* Prevent wrapping */
 }
 
 .profile-pic {
@@ -68,12 +69,16 @@ header {
 .navbar {
   display: flex;
   align-items: center;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  white-space: nowrap; /* Prevent wrapping of links */
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
 }
 
 .nav-links {
   list-style: none;
   display: flex;
   gap: 20px;
+  padding: 10px 0; /* Add some padding */
 }
 
 .nav-links li a {
@@ -223,9 +228,18 @@ header {
 /* Responsive Design */
 @media (max-width: 768px) {
   .head {
-    flex-direction: column;
+    flex-direction: row; /* Keep navbar in a single line */
     align-items: center;
-    gap: 20px;
+    gap: 10px;
+  }
+
+  .navbar {
+    overflow-x: auto; /* Enable horizontal scrolling */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
+  }
+
+  .nav-links {
+    gap: 15px; /* Reduce gap for smaller screens */
   }
 
   .contact-section h1 {
@@ -238,9 +252,19 @@ header {
 }
 
 @media (max-width: 480px) {
-  .nav-links {
-    flex-direction: column;
+  .head {
+    flex-direction: row; /* Ensure navbar stays in a single line */
     align-items: center;
+    gap: 10px;
+  }
+
+  .navbar {
+    overflow-x: auto; /* Enable horizontal scrolling */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
+  }
+
+  .nav-links {
+    gap: 10px; /* Further reduce gap for very small screens */
   }
 
   .contact-section h1 {
